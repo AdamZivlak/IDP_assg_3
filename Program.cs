@@ -7,6 +7,14 @@
             public string grundämne, typ;
             public int z; //atomnummer
             public double smältpunkt, kokpunkt;
+
+            public void print()
+            {
+                Console.WriteLine($"Grundämne: {grundämne} Atomnummer: {z}");
+                Console.WriteLine($"    Typ: {typ}");
+                Console.WriteLine($"    Smältpunkt: {smältpunkt} K");
+                Console.WriteLine($"    Kokpunkt: {kokpunkt} K");
+            }
         }
         static void Main(string[] args)
         {
@@ -34,6 +42,9 @@
                 smältpunkt = 1337.33,
                 kokpunkt = 3243,
             };
+            syre.print();
+            järn.print();
+            guld.print();
         }
     }
 }
