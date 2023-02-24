@@ -42,9 +42,9 @@
                 smältpunkt = 1337.33,
                 kokpunkt = 3243,
             };
-            syre.print();
-            järn.print();
-            guld.print();
+            //syre.print();
+            //järn.print();
+            //guld.print();
 
             Element[] grundämnen = new Element[6]
             {
@@ -71,9 +71,13 @@
                     z = 80,
                     typ = "metall",
                     smältpunkt = 234.3210,
-                    kokpunkt = 629.88 },
+                    kokpunkt = 629.88 }
 
             };
+            foreach(Element G in grundämnen)
+            {
+                G.print();
+            }
         }
     }
 }
