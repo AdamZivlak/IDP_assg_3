@@ -5,12 +5,35 @@
         public class Element
         {
             public string grundämne, typ;
-            public int atomnummer;
+            public int z; //atomnummer
             public double smältpunkt, kokpunkt;
         }
         static void Main(string[] args)
         {
-
+            Element syre = new Element()
+            {
+                grundämne = "syre",
+                z = 8,
+                typ = "ickemetall",
+                smältpunkt = 54.36,
+                kokpunkt = 90.188,
+            };
+            Element järn = new Element()
+            {
+                grundämne = "järn",
+                z = 26,
+                typ = "metall",
+                smältpunkt = 1811,
+                kokpunkt = 3134,
+            };
+            Element guld = new Element()
+            {
+                grundämne = "guld",
+                z = 79,
+                typ = "metall",
+                smältpunkt = 1337.33,
+                kokpunkt = 3243,
+            };
         }
     }
 }
