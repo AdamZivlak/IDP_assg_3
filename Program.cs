@@ -2,8 +2,6 @@
 {
     internal class Program
     {
-        private static string typ;
-
         public class Element
         {
             public string grundämne, typ;
@@ -76,16 +74,34 @@
                     kokpunkt = 629.88 } 
             };
 
-            foreach(Element G in grundämnen)
+            /*foreach(Element G in grundämnen)
             {
                 G.print();
-            }
+            }*/
             Console.WriteLine("==== Lista alla metaller! ====");
             for(int i = 0; i < grundämnen.Length; i++)
             {
                 if (grundämnen[i].typ == "metall")
                     Console.WriteLine($"{i}: {grundämnen[i].typ}");
             }
+            Console.WriteLine("-------(Uppgift 7)------");
+            Console.WriteLine("Grundämne med smältpunkt under 273.16 K," +
+                "och kokpunkt över 273.16: ");
+            Console.WriteLine();
+            foreach (Element G in grundämnen)
+            {
+                if (G.smältpunkt < 273.16 )
+                {
+                    G.print();
+                }
+                if (G.kokpunkt > 273.16)
+                {
+                    G.print();
+                }
+
+            }
+            
+            Console.ReadKey();
         }
     }
 }
