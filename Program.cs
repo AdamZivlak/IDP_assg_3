@@ -74,10 +74,10 @@
                     kokpunkt = 629.88 } 
             };
 
-            /*foreach(Element G in grundämnen)
+            foreach(Element G in grundämnen)
             {
                 G.print();
-            }*/
+            }
             Console.WriteLine("==== Lista alla metaller! ====");
             for(int i = 0; i < grundämnen.Length; i++)
             {
@@ -85,20 +85,14 @@
                     Console.WriteLine($"{i}: {grundämnen[i].typ}");
             }
             Console.WriteLine("-------(Uppgift 7)------");
-            Console.WriteLine("Grundämne med smältpunkt under 273.16 K," +
-                "och kokpunkt över 273.16: ");
+            Console.WriteLine("Grundämne med smältpunkt under 273.16 K och kokpunkt över 273.16 K: ");
             Console.WriteLine();
             foreach (Element G in grundämnen)
             {
-                if (G.smältpunkt < 273.16 )
+                if (G.smältpunkt < 273.16 && G.kokpunkt > 273.16 )
                 {
                     G.print();
                 }
-                if (G.kokpunkt > 273.16)
-                {
-                    G.print();
-                }
-
             }
             
             Console.ReadKey();
