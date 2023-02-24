@@ -45,6 +45,35 @@
             syre.print();
             järn.print();
             guld.print();
+
+            Element[] grundämnen = new Element[6]
+            {
+                syre,
+                järn,
+                guld,
+                new Element()
+                {
+                    grundämne = "väte",
+                    z = 1,
+                    typ = "ickemetall",
+                    smältpunkt = 13.99,
+                    kokpunkt = 20.271 },
+                new Element()
+                {
+                    grundämne = "brom",
+                    z = 35,
+                    typ = "ickemetall",
+                    smältpunkt = 265.8,
+                    kokpunkt = 332.0 },
+                new Element() 
+                {
+                    grundämne = "kvicksilver",
+                    z = 80,
+                    typ = "metall",
+                    smältpunkt = 234.3210,
+                    kokpunkt = 629.88 },
+
+            };
         }
     }
 }
