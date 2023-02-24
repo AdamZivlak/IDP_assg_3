@@ -2,6 +2,8 @@
 {
     internal class Program
     {
+        private static string typ;
+
         public class Element
         {
             public string grundämne, typ;
@@ -65,18 +67,24 @@
                     typ = "ickemetall",
                     smältpunkt = 265.8,
                     kokpunkt = 332.0 },
-                new Element() 
+                new Element()
                 {
                     grundämne = "kvicksilver",
                     z = 80,
                     typ = "metall",
                     smältpunkt = 234.3210,
-                    kokpunkt = 629.88 }
-
+                    kokpunkt = 629.88 } 
             };
+
             foreach(Element G in grundämnen)
             {
                 G.print();
+            }
+            Console.WriteLine("==== Lista alla metaller! ====");
+            for(int i = 0; i < grundämnen.Length; i++)
+            {
+                if (grundämnen[i].typ == "metall")
+                    Console.WriteLine($"{i}: {grundämnen[i].typ}");
             }
         }
     }
